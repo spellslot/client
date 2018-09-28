@@ -1,0 +1,46 @@
+{
+    "globals": {
+        "module": false
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "arrow-parens": ["error", "as-needed"],
+        "arrow-spacing": ["error", { "before": true, "after": true }],
+        "eqeqeq": "error",
+        "linebreak-style": ["error", "unix"],
+        "no-unreachable": "error",
+        "object-curly-spacing": ["error", "always"],
+        "prefer-const": "error",
+        "quotes": ["error", "single"],
+        "react/jsx-curly-spacing": [2, "always", {
+            "allowMultiline": true
+        }],
+        "react/no-find-dom-node": "warn",
+        "react/prop-types": "warn",
+        "semi": ["error", "never"]
+    },
+    "settings": {
+        "react": {
+            "version": "16.3.2"
+        }
+    }
+}
