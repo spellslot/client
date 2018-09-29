@@ -22,55 +22,55 @@ const row = css`
 `
 
 class Spell extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      shouldShowDetails: false
+    constructor(props) {
+        super(props)
+        this.state = {
+            shouldShowDetails: false
+        }
     }
-  }
 
-  toggleShowDetails() {
-    this.setState({
-      shouldShowDetails: !this.state.shouldShowDetails
-    })
-  }
+    toggleShowDetails() {
+        this.setState({
+            shouldShowDetails: !this.state.shouldShowDetails
+        })
+    }
 
-  render() {
-    const { spell, selected, onSpellbookClick } = this.props
-    return (
-      <div className={ cx(flex.flexContainer, row) } onClick={ () => {
-        if(!getSelection().toString())
-          this.toggleShowDetails()
-      } }>
-        <div className={ cx(flex.flexItem, styles.name) }>
-          <p>{ spell.name }</p>
-        </div>
-        <div className={ cx(flex.flexItem, styles.level) }>
-          <p>{ spell.level }</p>
-        </div>
-        <div className={ cx(flex.flexItem, styles.school, styles.hideOnMobile) }>
-          <p>{ spell.school }</p>
-        </div>
-        <div className={ cx(flex.flexItem, styles.classes, styles.hideOnMobile) }>
-          <p>{ spell.classes }</p>
-        </div>
-        <div className={ cx(flex.flexItem, styles.options, styles.hideOnMobile, { [active]: selected }) }
-          onClick={ e => {
-            e.stopPropagation()
-            onSpellbookClick(spell.id)
-          } }>
-          <Icon name="book"></Icon>
-        </div>
-        <SpellDetails { ...spell } shouldShow={ this.state.shouldShowDetails } />
-      </div>
-    )
-  }
+    render() {
+        const { spell, selected, onSpellbookClick } = this.props
+        return (
+            <div className={ cx(flex.flexContainer, row) } onClick={ () => {
+                if(!getSelection().toString())
+                    this.toggleShowDetails()
+            } }>
+                <div className={ cx(flex.flexItem, styles.name) }>
+                    <p>{ spell.name }</p>
+                </div>
+                <div className={ cx(flex.flexItem, styles.level) }>
+                    <p>{ spell.level }</p>
+                </div>
+                <div className={ cx(flex.flexItem, styles.school, styles.hideOnMobile) }>
+                    <p>{ spell.school }</p>
+                </div>
+                <div className={ cx(flex.flexItem, styles.classes, styles.hideOnMobile) }>
+                    <p>{ spell.classes }</p>
+                </div>
+                <div className={ cx(flex.flexItem, styles.options, styles.hideOnMobile, { [active]: selected }) }
+                    onClick={ e => {
+                        e.stopPropagation()
+                        onSpellbookClick(spell.id)
+                    } }>
+                    <Icon name="book"></Icon>
+                </div>
+                <SpellDetails { ...spell } shouldShow={ this.state.shouldShowDetails } />
+            </div>
+        )
+    }
 }
 
 Spell.propTypes = {
-  spell: PropTypes.object.isRequired,
-  selected: PropTypes.bool.isRequired,
-  onSpellbookClick: PropTypes.func.isRequired
+    spell: PropTypes.object.isRequired,
+    selected: PropTypes.bool.isRequired,
+    onSpellbookClick: PropTypes.func.isRequired
 }
 
 export default Spell

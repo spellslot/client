@@ -32,13 +32,13 @@ const items = css`
 `
 
 const Navigation = () => (
-  <nav className={ navbar }>
-    <Link to="/">Spellslot</Link>
-    <div className={ items }>
-      <Link to="/">Spells</Link>
-      <Link to="/spellbook">Spellbook</Link>
-    </div>
-  </nav>
+    <nav className={ navbar }>
+        <Link to="/">Spellslot</Link>
+        <div className={ items }>
+            <Link to="/">Spells</Link>
+            <Link to="/spellbook">Spellbook</Link>
+        </div>
+    </nav>
 )
 
 export default Navigation

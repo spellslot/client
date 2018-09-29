@@ -16,9 +16,9 @@ const loading = css`
 `
 
 const Loading = () => (
-  <div className={ loading }>
-    <Icon name="spinner" spin />
-  </div>
+    <div className={ loading }>
+        <Icon name="spinner" spin />
+    </div>
 )
 
 export default Loading

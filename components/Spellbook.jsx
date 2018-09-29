@@ -3,10 +3,10 @@ import SpellbookTopBarContainer from 'containers/spellbook/SpellbookTopBarContai
 import SpellbookListContainer from 'containers/spellbook/SpellbookListContainer'
 
 const RootSpellbook = () => (
-  <div>
-    <SpellbookTopBarContainer />
-    <SpellbookListContainer />
-  </div>
+    <div>
+        <SpellbookTopBarContainer />
+        <SpellbookListContainer />
+    </div>
 ) 
 
 export default RootSpellbook

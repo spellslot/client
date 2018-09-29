@@ -9,23 +9,23 @@ const filter = css`
 `
 
 const SpellFilterLink = ({ text, active, onClick }) => {
-  return (
-    <span className={ filter }>
-      <a className={ cx(buttonStyles.btn, buttonStyles.default, { [buttonStyles.active]: active }) } onClick={ e => {
-          e.preventDefault()
-          onClick(text)
-        } }
-      >
-        { text }
-      </a>
-    </span>
-  )
+    return (
+        <span className={ filter }>
+            <a className={ cx(buttonStyles.btn, buttonStyles.default, { [buttonStyles.active]: active }) } onClick={ e => {
+                e.preventDefault()
+                onClick(text)
+            } }
+            >
+                { text }
+            </a>
+        </span>
+    )
 }
 
 SpellFilterLink.propTypes = {
-  text: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired
+    text: PropTypes.string.isRequired,
+    active: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired
 }
 
 export default SpellFilterLink

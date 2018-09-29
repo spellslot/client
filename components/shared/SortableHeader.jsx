@@ -30,13 +30,13 @@ const active = sortOrder => css`
 `
 
 const SortableHeader = ({ headers, sortOrder, sortKey, onClick }) => (
-  <div className={ cx(flex.flexContainer, header) }>
-    {headers.map(h => (
-      <div key={ `header-${ h }` } className={ cx(flex.flexItem, styles[h], { [active(sortOrder)]: sortKey === h }) } onClick={ () => onClick(h, sortOrder, sortKey === h) }>
-        <p>{ h }</p>
-      </div>
-    ))}
-  </div>
+    <div className={ cx(flex.flexContainer, header) }>
+        {headers.map(h => (
+            <div key={ `header-${ h }` } className={ cx(flex.flexItem, styles[h], { [active(sortOrder)]: sortKey === h }) } onClick={ () => onClick(h, sortOrder, sortKey === h) }>
+                <p>{ h }</p>
+            </div>
+        ))}
+    </div>
 )
 
 export default SortableHeader

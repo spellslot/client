@@ -1,11 +1,11 @@
 import { css } from 'react-emotion'
 
 const styles = {
-  flexContainer: css`
+    flexContainer: css`
     display: flex;
     flex-wrap: wrap;
   `,
-  flexItem: css`
+    flexItem: css`
     box-sizing: border-box;
     width: 100%;
     overflow: hidden;

@@ -3,19 +3,19 @@ import TopBar from 'components/shared/TopBar'
 import { updateSearchTerm } from 'actions/spells'
 
 const mapStateToProps = (state, ownProps) => ({
-  ...ownProps,
-  isLoading: state.spells.isLoading
+    ...ownProps,
+    isLoading: state.spells.isLoading
 })
 
 const mapDispatchToProps = dispatch => ({
-  onSearchChange: term => {
-    dispatch(updateSearchTerm(term))
-  }
+    onSearchChange: term => {
+        dispatch(updateSearchTerm(term))
+    }
 })
 
 const SpellsTopBarContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(TopBar)
 
 export default SpellsTopBarContainer

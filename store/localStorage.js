@@ -2,12 +2,12 @@ export const loadState = () => {
     try {
         const serializedState = localStorage.getItem('spellbook')
         if(serializedState === null)
-        return undefined
+            return undefined
         const json = JSON.parse(serializedState)
         return {
-        spellbook: {
-            selected: [...json]
-        }
+            spellbook: {
+                selected: [...json]
+            }
         }
     }
     catch(err) {

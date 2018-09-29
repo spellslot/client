@@ -3,12 +3,12 @@ import { getVisibleSpellbookSpells } from 'selectors/spells'
 import TopBarContainer from 'containers/shared/TopBarContainer'
 
 const mapStateToProps = state => ({
-  title: 'Spellbook',
-  numberOfSpells: getVisibleSpellbookSpells(state).length,
+    title: 'Spellbook',
+    numberOfSpells: getVisibleSpellbookSpells(state).length,
 })
 
 const SpellbookTopBarContainer = connect(
-  mapStateToProps
+    mapStateToProps
 )(TopBarContainer)
 
 export default SpellbookTopBarContainer

@@ -8,12 +8,12 @@ import throttle from 'lodash/throttle'
 const store = configureStore(loadState())
 
 store.subscribe(throttle(() => {
-  saveState({
-    spellbook: store.getState().spellbook
-  })
+    saveState({
+        spellbook: store.getState().spellbook
+    })
 }, 1000))
 
 render(
-  <Root store={ store } />,
-  document.getElementById('root')
+    <Root store={ store } />,
+    document.getElementById('root')
 )

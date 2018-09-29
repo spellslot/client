@@ -2,7 +2,7 @@ import { css } from 'react-emotion'
 import colors from 'styles/colors'
 
 const styles = {
-  btn: css`
+    btn: css`
     border-radius: 2px;
     display: inline-block;
     padding: 1rem 1.5rem;
@@ -22,12 +22,12 @@ const styles = {
       color: ${ colors.darkGray };
     }
   `,
-  default: css`
+    default: css`
     background-color: ${ colors.white };
     color: ${ colors.darkGray };
     border: 1px solid ${ colors.mediumGray };
   `,
-  active: css`
+    active: css`
     border: 1px solid ${ colors.lightPurple };
     color: ${ colors.lightPurple }
   `

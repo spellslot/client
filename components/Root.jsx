@@ -16,31 +16,31 @@ const content = css`
 `
 
 class Root extends Component {
-  componentDidMount() {
-    const { dispatch } = this.props
-    dispatch(spellsFetchData('/api/v1/spells'))
-  }
+    componentDidMount() {
+        const { dispatch } = this.props
+        dispatch(spellsFetchData('/api/v1/spells'))
+    }
 
-  render() {
-    return (
-      <Provider store={ this.props.store }>
-        <div>
-          <BrowserRouter>
-            <div>
-              <Navigation />
-              <div className={ content }>
-                <Switch>
-                  <Route path="/spellbook" component={ RootSpellbook } />
-                  <Route path="/" component={ RootSpells } />
-                </Switch>
-              </div>
-              <Footer />
-            </div>
-          </BrowserRouter>
-        </div>
-      </Provider>
-    )
-  }
+    render() {
+        return (
+            <Provider store={ this.props.store }>
+                <div>
+                    <BrowserRouter>
+                        <div>
+                            <Navigation />
+                            <div className={ content }>
+                                <Switch>
+                                    <Route path="/spellbook" component={ RootSpellbook } />
+                                    <Route path="/" component={ RootSpells } />
+                                </Switch>
+                            </div>
+                            <Footer />
+                        </div>
+                    </BrowserRouter>
+                </div>
+            </Provider>
+        )
+    }
 }
 
 export default connect()(Root)

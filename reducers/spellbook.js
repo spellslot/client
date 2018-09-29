@@ -1,18 +1,18 @@
 import * as types from 'constants/actionTypes'
 
 const initialState = {
-  selected: []
+    selected: []
 }
 
 const spellbook = (state = initialState, action) => {
-  switch(action.type) {
+    switch(action.type) {
     case types.TOGGLE_IN_SPELLBOOK:
-      return state.selected.includes(action.id) ?
-        { ...state, selected: state.selected.filter(i => i !== action.id) } :
-        { ...state, selected: [...state.selected, action.id] }
+        return state.selected.includes(action.id) ?
+            { ...state, selected: state.selected.filter(i => i !== action.id) } :
+            { ...state, selected: [...state.selected, action.id] }
     default:
-      return state
-  }
+        return state
+    }
 }
 
 export default spellbook
