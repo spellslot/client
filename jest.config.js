@@ -18,9 +18,6 @@ module.exports = {
         '^selectors/(.*)': '<rootDir>/selectors/$1',
         '^styles/(.*)': '<rootDir>/styles/$1'
     },
-    'setupFiles': [
-        '<rootDir>/testing/setup.js'
-    ],
     'testURL': 'http://localhost',
     'transform': {
         '^.+\\.js[x]?$': 'babel-jest'
