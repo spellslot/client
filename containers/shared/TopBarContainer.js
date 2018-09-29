@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import TopBar from '../../components/shared/TopBar'
-import { updateSearchTerm } from '../../actions/spells'
+import TopBar from 'components/shared/TopBar'
+import { updateSearchTerm } from 'actions/spells'
 
 const mapStateToProps = (state, ownProps) => ({
   ...ownProps,

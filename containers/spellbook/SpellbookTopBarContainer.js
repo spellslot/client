@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { getVisibleSpellbookSpells } from '../../selectors/spells'
-import TopBarContainer from '../shared/TopBarContainer'
+import { getVisibleSpellbookSpells } from 'selectors/spells'
+import TopBarContainer from 'containers/shared/TopBarContainer'
 
 const mapStateToProps = state => ({
   title: 'Spellbook',

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import FilterLink from '../../../components/shared/FilterLink'
-import { filterSpellsByLevel, clearSpellsLevelFilter } from '../../../actions/spells'
+import FilterLink from 'components/shared/FilterLink'
+import { filterSpellsByLevel, clearSpellsLevelFilter } from 'actions/spells'
 
 const getActiveState = (state, text) => {
   return text === 'All' ? state.spells.filterLevel.length === 0 :

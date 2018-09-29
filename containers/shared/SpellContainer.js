@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import Spell from '../../components/spells/Spell'
-import { toggleInSpellbook } from '../../actions/spellbook'
+import Spell from 'components/spells/Spell'
+import { toggleInSpellbook } from 'actions/spellbook'
 
 const mapStateToProps = (state, ownProps) => ({
   spell: ownProps.spell,

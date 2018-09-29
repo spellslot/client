@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { updateSpellsSort } from '../../actions/spells'
-import SortableHeader from '../../components/shared/SortableHeader'
+import { updateSpellsSort } from 'actions/spells'
+import SortableHeader from 'components/shared/SortableHeader'
 
 const mapStateToProps = state => ({
   headers: ['name', 'level', 'school', 'classes'],

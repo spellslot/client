@@ -1,5 +1,5 @@
 import { css } from 'react-emotion'
-import colors from './colors'
+import colors from 'styles/colors'
 
 const styles = {
   btn: css`
