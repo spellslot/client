@@ -1,4 +1,4 @@
-import * as types from '../actionTypes'
+import * as types from 'constants/actionTypes'
 
 export const spellsHasErrored = () => ({
   type: types.SPELLS_HAS_ERRORED
