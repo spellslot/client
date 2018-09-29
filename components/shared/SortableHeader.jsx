@@ -1,7 +1,7 @@
 import React from 'react'
 import { css, cx } from 'react-emotion'
-import styles from '../../styles/spells'
-import flex from '../../styles/flex'
+import styles from 'styles/spells'
+import flex from 'styles/flex'
 
 const header = css`
   text-transform: uppercase;
