@@ -4,31 +4,31 @@ import { Link } from 'react-router-dom'
 import colors from 'styles/colors'
 
 const navbar = css`
-  width: 100%;
-  background-color: ${ colors.purple };
-  display: flex;
-  justify-content: flex-start;
+    width: 100%;
+    background-color: ${ colors.purple };
+    display: flex;
+    justify-content: flex-start;
 
-  a {
-    color: ${ colors.white };
-    padding: 1rem 2rem;
+    a {
+        color: ${ colors.white };
+        padding: 1rem 2rem;
 
-    &:hover {
-      background-color: ${ colors.lightPurple };
+        &:hover {
+        background-color: ${ colors.lightPurple };
+        }
+
+        &:hover, &:focus, &:active, &:visited {
+        color: ${ colors.white };
+        text-decoration: none;
+        }
     }
-
-    &:hover, &:focus, &:active, &:visited {
-      color: ${ colors.white };
-      text-decoration: none;
-    }
-  }
 `
 
 const items = css`
-  list-style: none;
-  display: flex;
-  margin-left: auto;
-  margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 0;
 `
 
 const Navigation = () => (

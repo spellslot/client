@@ -4,8 +4,8 @@ import { css, cx } from 'react-emotion'
 import buttonStyles from '../../styles/button.js'
 
 const filter = css`
-  margin-right: 0.5rem;
-  border-radius: 2px;
+    margin-right: 0.5rem;
+    border-radius: 2px;
 `
 
 const SpellFilterLink = ({ text, active, onClick }) => {

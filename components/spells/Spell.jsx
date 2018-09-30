@@ -8,17 +8,17 @@ import { Icon } from 'react-fa'
 import SpellDetails from './SpellDetails'
 
 const active = css`
-  span {
-    color: ${ colors.purple };
-  }
+    span {
+        color: ${ colors.purple };
+    }
 `
 
 const row = css`
-  padding: 1rem 3rem;
-  border-radius: 2px;
-  background-color: ${ colors.offWhite };
-  margin: 0.8rem 0;
-  box-shadow: 0px 1px 4px 0px ${ colors.lightGray };
+    padding: 1rem 3rem;
+    border-radius: 2px;
+    background-color: ${ colors.offWhite };
+    margin: 0.8rem 0;
+    box-shadow: 0px 1px 4px 0px ${ colors.lightGray };
 `
 
 class Spell extends Component {

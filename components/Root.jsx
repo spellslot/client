@@ -1,24 +1,22 @@
 import React, { Component } from 'react'
-import { Provider, connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import { Provider } from 'react-redux'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { css } from 'react-emotion'
 import Navigation from 'components/Navigation'
 import RootSpells from 'components/Spells'
 import RootSpellbook from 'components/Spellbook'
 import Footer from 'components/Footer'
-import { spellsFetchData } from 'actions/spells'
-
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'styles/app.css'
 
 const content = css`
-  min-height: calc(100vh - 2rem - 20px - 13.7rem)
+    min-height: calc(100vh - 2rem - 20px - 13.7rem)
 `
 
 class Root extends Component {
     componentDidMount() {
-        const { dispatch } = this.props
-        dispatch(spellsFetchData('/api/v1/spells'))
+        this.props.load()
     }
 
     render() {
@@ -43,4 +41,8 @@ class Root extends Component {
     }
 }
 
-export default connect()(Root)
+Root.propTypes = {
+    load: PropTypes.func
+}
+
+export default Root

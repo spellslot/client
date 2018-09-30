@@ -3,25 +3,25 @@ import PropTypes from 'prop-types'
 import { css } from 'react-emotion'
 
 const details = css`
-  margin-top: 1rem;
+    margin-top: 1rem;
 
-  p {
-    overflow-x: initial;
-    white-space: initial;
-    margin-bottom: 0.25rem;
-  }
+    p {
+        overflow-x: initial;
+        white-space: initial;
+        margin-bottom: 0.25rem;
+    }
 `
 
 const detailLabel = css`
-  font-weight: 700;
+    font-weight: 700;
 `
 
 const extra = css`
-  display: none;
+    display: none;
 
-  @media screen and (max-width: 960px) {
-    display: block;
-  }
+    @media screen and (max-width: 960px) {
+        display: block;
+    }
 `
 
 const Spell = ({ shouldShow, school, classes, components, duration, casting_time, range, description, athigherlevel }) => {
